@@ -15,6 +15,7 @@ $sale = 20;
 
 $new_price = fn($x) => $x * (1 - $sale / 100);
 
+// Muestra las filas
 echo implode(array_map(
     fn($product, $price) => $tr(
         $td('Product: ' . $product) . 
