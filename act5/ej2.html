@@ -1,0 +1,69 @@
+<h1>Datos personales (Formulario)</h1>
+
+<form action="ej2.php" method="POST">
+
+    <div>
+        <label>Nombre:</label>
+        <input name="nombre">
+    </div>
+    
+    <div>
+        <label>Apellido:</label>
+        <input name="apellido">
+    </div>
+
+    <div>
+        <label>Edad:</label>
+        <input name="edad" type="number" min="0">
+    </div>
+
+    <div>
+        <label>Peso:</label>
+        <input name="peso" type="number" min="0">
+    </div>
+
+    <div>
+        <label>Sexo:</label>
+        <span>
+            <input name="sexo" type="radio" value="male">
+            <span>Hombre</span>
+        </span>
+        <span>
+            <input name="sexo" type="radio" value="female">
+            <span>Mujer</span>
+        </span>
+    </div>
+
+    <div>
+        <label>Estado civil:</label>
+        <span>
+            <input name="estado civil" type="radio" value="married">
+            <span>Casado</span>
+        </span>
+        <span>
+            <input name="estado civil" type="radio" value="single">
+            <span>Soltero</span>
+        </span>
+        <span>
+            <input name="estado civil" type="radio" value="other">
+            <span>Otro</span>
+        </span>
+    </div>
+
+    <div>
+        <label>Aficiones</label>
+        <span>
+            <input name="aficiones" type="checkbox" value="movies">
+            <span>Cine</span>
+        </span>
+        <span>
+            <input name="aficiones" type="checkbox" value="reading">
+            <span>Literatura</span>
+        </span>
+        <span>
+            <input name="aficiones" type="checkbox" value="sport">
+            <span>Deporte</span>
+        </span>
+    </div>
+    <button type="submit">Enviar</button>
+</form>
