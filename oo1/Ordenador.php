@@ -8,7 +8,13 @@ class Ordenador {
 
     private Despacho $despacho;
 
-    public function __construct(private string $so, private string $codHz) { }
+    public function __construct(
+        private string $so, 
+        private string $codHz,
+        private Despacho $despacho
+    ) { 
+        $this->despacho->addOrdenadores($this);
+    }
 
 }
 
