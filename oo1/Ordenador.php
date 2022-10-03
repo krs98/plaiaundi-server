@@ -1,20 +1,27 @@
 <?php
 
-include "Despacho.php";
+include "Getters.php";
+include "Setters.php";
 
 class Ordenador {
 
     use Getters, Setters;
 
-    private Despacho $despacho;
-
     public function __construct(
         private string $so, 
         private string $codHz,
         private bool $esSobremesa,
-        private Despacho $despacho
-    ) { 
-        $this->despacho->addOrdenadores($this);
+    ) { }
+
+    public function __toString() {
+        $so = $this->so;
+        $codHz = $this->codHz;
+        $sobremesa = $this->esSobremesa ? 'true': 'false';
+        return "Ordenador { so: $so, hz: $codHz, sobremesa: $sobremesa }";
+    }
+
+    public function hasCode($code) {
+        return $this->codHz === $code;
     }
 
 }
