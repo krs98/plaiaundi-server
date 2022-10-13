@@ -1,7 +1,10 @@
 
 <?php
 
+include_once("../utils.php");
 include "repository/StudentRepository.php";
+
+checkSession('username', fn() => redirect('login.php'));
 
 $id = $_GET['id'];
 

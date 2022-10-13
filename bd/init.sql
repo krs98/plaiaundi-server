@@ -29,3 +29,12 @@ insert into `person` (`name`, `dni`, `email`) values ('Name 3', '23232325A', 'em
 insert into `student` (`person_id`, `enroll_code`, `course`) values (1, 'code1', '1daw3');
 insert into `student` (`person_id`, `enroll_code`, `course`) values (2, 'code2', '2daw3');
 insert into `student` (`person_id`, `enroll_code`, `course`) values (3, 'code3', '2daw3');
+
+create table if not exists `user` (
+    `id` int primary key auto_increment,
+    `name` varchar(255) not null,
+    `password` varchar(255) not null,
+    constraint `name_uindex` unique (`name`)
+);
+
+insert into `user` (`name`, `password`) values ('admin', 'admin');
